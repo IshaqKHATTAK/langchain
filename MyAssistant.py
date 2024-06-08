@@ -14,4 +14,8 @@ My_assistant.create_Prompt_template('''You are a helpful assistant. Answer all q
 output = My_assistant.chat_with_history("My name is ishaq")
 print(output)
 
-print('len of docs', My_assistant.text_to_index('./data/'))
+
+output = My_assistant.chat_with_history("what is my name")
+print(output)
+
+#print('len of docs', My_assistant.text_to_index('./data/'))
