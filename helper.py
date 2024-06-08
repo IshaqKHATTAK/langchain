@@ -17,6 +17,8 @@ prompt_template = ChatPromptTemplate.from_messages(
     [("system", system_template), ("user", "{text}")]
 )
 chain = prompt_template | model | parser
-
+#frist the input goes through the prompt template then goes throught the model then parser and parser gives the final answer
+#note if we have variable in input then our input prompt and prompt template will change little
+# {"var_name":"var_value","text": "whats your name!"}
 
 print(chain.invoke({"text": "whats your name!"}))
